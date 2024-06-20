@@ -1,0 +1,203 @@
+.social {
+  .container {
+    position: relative;
+    padding-top: 90px;
+    padding-bottom: 30px;
+    @include mobile {
+      padding-bottom: 60px;
+    }
+    @include desktop {
+      padding-bottom: 90px;
+    }
+  }
+}
+.social-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 2.5;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: capitalize;
+  color: $title;
+  z-index: 2;
+  position: relative;
+  margin-bottom: 70px;
+  &::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 60px;
+    background-color: $accent;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: -30px;
+    @include desktop {
+      bottom: -40px;
+    }
+  }
+  @include mobile {
+    font-size: 24px;
+  }
+  @include desktop {
+    font-size: 36px;
+  }
+}
+.social-desk {
+  @extend %events-style;
+  @extend %center-absolute;
+  top: 75px;
+  z-index: 1;
+  @include mobile {
+    top: 70px;
+  }
+  @include desktop {
+    top: 60px;
+  }
+}
+.social-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include desktop {
+    flex-wrap: nowrap;
+  }
+}
+.social-item {
+  width: 290px;
+  max-height: 350px;
+  background-color: $darkGray;
+  border-radius: 6px;
+  @include mobile-360px {
+    width: 330px;
+  }
+}
+.soc-head {
+  padding: 25px;
+  display: flex;
+  border-bottom: 2px solid $events;
+  align-items: center;
+}
+.soc-link {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid $events;
+  display: block;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mobile-360px {
+    margin-right: 20px;
+  }
+}
+.soc-icon {
+  width: 15px;
+  height: 15px;
+  fill: $lightGray;
+}
+.soc-name {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2.14;
+  color: $social-col;
+  @include mobile-360px {
+    font-size: 14px;
+  }
+}
+.follow-btn {
+  margin-left: auto;
+  color: $lightGray;
+  font-weight: 900;
+  font-size: 10px;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 15px 10px;
+  background-color: transparent;
+  border: 2px solid $events;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color $transition-2, border-color $transition-2,
+    color $transition-2;
+  &:hover,
+  &:focus {
+    background-color: $accent;
+    border-color: $accent;
+    color: $white;
+  }
+  @include mobile-360px {
+    padding: 15px;
+  }
+}
+.soc-wrap {
+  padding: 25px;
+}
+.post-data {
+  font-size: 12px;
+  line-height: 2.14;
+  color: $lightGray;
+  margin-bottom: 10px;
+  @include mobile-360px {
+    font-size: 14px;
+  }
+}
+.soc-text {
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  line-height: 1.8;
+  @include mobile-360px {
+    font-size: 14px;
+  }
+}
+.twitter-author {
+  font-size: 12px;
+  line-height: 2.14;
+  color: $accent;
+  @include mobile-360px {
+    font-size: 14px;
+  }
+}
+
+.instagram-slider {
+  .slick-next {
+    display: none !important;
+    &::before {
+      display: none;
+    }
+  }
+  .slick-prev {
+    z-index: 100;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-color: $accent;
+    border: $accent;
+    &::before {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' fill='currentColor' class='bi bi-arrow-left' viewBox='0 0 13 13'%3E%3Cpath fill-rule='evenodd' d='M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z'/%3E%3C/svg%3E");
+      margin-bottom: 15%;
+      background: $accent;
+      fill: $events;
+    }
+  }
+}
+.soc-img-wrap {
+  img {
+    width: 75px;
+    height: 80px;
+    border-radius: 6px;
+    @include mobile-360px {
+      width: 92px;
+      height: 94px;
+    }
+  }
+}

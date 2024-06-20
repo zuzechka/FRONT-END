@@ -1,0 +1,102 @@
+.header {
+  border-bottom: 1px solid $white;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.logo-wrap {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  @include tablet {
+    padding-bottom: 33px;
+    padding-top: 33px;
+  }
+}
+.logo-icon {
+  fill: $accent;
+}
+.logo-desk {
+  fill: $accent;
+}
+.header-list {
+  display: none;
+  @include tablet {
+    display: flex;
+    gap: 45px;
+    padding-right: 11px;
+    padding-top: 10px;
+  }
+}
+.header-link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $white;
+  transition: color $transition;
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
+.open-menu-btn {
+  border: transparent;
+  background-color: transparent;
+  padding-top: 10px;
+  @include tablet {
+    display: none;
+  }
+}
+.menu-icon {
+  fill: $white;
+}
+/* ---------------------------------- menu ---------------------------------- */
+.header-menu {
+  position: fixed;
+  z-index: 1;
+  background-color: $white;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  @include tablet {
+    display: none;
+  }
+}
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.close-btn {
+  position: absolute;
+  border: transparent;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 10px 12px;
+  top: 10px;
+  right: 15px;
+}
+.header-mob-list {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.header-mob-link {
+  font-weight: 700;
+  font-size: 44px;
+  color: $black;
+  transition: color $transition;
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
